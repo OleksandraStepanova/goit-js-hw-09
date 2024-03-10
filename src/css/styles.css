@@ -7,4 +7,20 @@ ul {
 .menu {
   display: flex;
   flex-direction: column;
+  padding: 16px;
+}
+a {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 400;
+  font-size: 36px;
+  line-height: 1.5;
+  letter-spacing: 0.04em;
+  color: #808080;
+  text-decoration: none;
+}
+a:hover {
+  color: black;
 }
