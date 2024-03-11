@@ -23,8 +23,7 @@ function removeLocalStorage(event) {
     else {
         console.log(JSON.parse(localStorage.getItem(KEY_MESSAGE)));
         localStorage.removeItem(KEY_MESSAGE);
-        formRef.elements.email.value = '';
-        formRef.elements.message.value = '';
+        formRef.reset();
     }    
 }
  
