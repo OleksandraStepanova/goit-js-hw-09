@@ -17,11 +17,13 @@ formRef.elements.message.value = objMessage.message || '';
 formRef.addEventListener('submit', removeLocalStorage)
 function removeLocalStorage(event) {
     event.preventDefault();
-    if (validator.isEmpty(formRef.elements.email.value) || validator.isEmpty(formRef.elements.message.value)) {
+    const email = formRef.elements.email.value.trim();
+    const message = formRef.elements.message.value.trim();
+    if (email === '' || message === '') {
         alert('Заповніть будь-ласка всі поля форми!')
     }
     else {
-        console.log(JSON.parse(localStorage.getItem(KEY_MESSAGE)));
+        console.log({email,message});
         localStorage.removeItem(KEY_MESSAGE);
         formRef.reset();
     }    
