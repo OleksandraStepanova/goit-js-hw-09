@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
@@ -8,7 +8,13 @@
   </head>
 
   <body>
-    <form class="feedback-form" autocomplete="off">
+    <form
+      class="feedback-form"
+      autocomplete="off"
+      id="contact-form"
+      target="_blank"
+      method="POST"
+    >
       <label>
         Email
         <input
@@ -16,11 +22,12 @@
           name="email"
           autofocus
           placeholder="test@gmail.com"
+          data-fs-field
         />
       </label>
       <label>
         Message
-        <textarea name="message" rows="8"></textarea>
+        <textarea name="message" rows="8" data-fs-field></textarea>
       </label>
       <button type="submit">Submit</button>
     </form>
